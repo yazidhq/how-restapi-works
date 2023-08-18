@@ -1,0 +1,24 @@
+[
+  {
+    "nama": "Yazid",
+    "umur": 21,
+    "npm": 31120173,
+    "lulus": false,
+    "hobby": ["drawing", "coding"],
+    "pembimbing": {
+      "p1": "Dodi",
+      "p2": "Andi"
+    }
+  },
+  {
+    "nama": "Dono",
+    "umur": 20,
+    "npm": 31120172,
+    "lulus": false,
+    "hobby": ["drawing", "coding"],
+    "pembimbing": {
+      "p1": "Dodi",
+      "p2": "Andi"
+    }
+  }
+]
