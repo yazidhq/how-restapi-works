@@ -13,7 +13,33 @@ try {
             's' => 'harry'
         ]
     ]);
-    var_dump($response->getBody()->getContents());
+    $result = json_decode($response->getBody()->getContents(), true);
 } catch (Exception $e) {
     echo "An error occurred: " . $e->getMessage();
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+</head>
+
+<body>
+
+    <?php foreach ($result['Search'] as $row) : ?>
+        <ul>
+            <li>Title : <?= $row['Title'] ?></li>
+            <li>Year : <?= $row['Year'] ?></li>
+            <li>
+                <img src="<?= $row['Poster'] ?>" alt="">
+            </li>
+        </ul>
+    <?php endforeach; ?>
+
+</body>
+
+</html>
